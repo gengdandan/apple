@@ -1,0 +1,794 @@
+html,body,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,form,input{
+    margin:0px;
+    padding:0;/*带不带单位都可以去掉网页中的边框*/
+    font-family:Arial,"微软雅黑";
+    font-size:12px;
+    list-style:none;/*清除列表标签的小圆点*/
+}
+a{
+    color:#666;
+    text-decoration: none;
+}
+img{
+    border:none;
+}
+
+/*导航栏开始*/
+.navtop{
+    width: 100%;
+    height: 44px;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    left: 0;top: 0;
+    z-index: 999;
+}
+/*大屏开始*/
+.nav{
+    height: 44px;
+    margin: auto;
+    max-width: 1024px;
+    display: block;
+}
+.nav ul li{
+    width: 11.111111111111111%;
+    float: left;
+    text-align: center;
+    line-height: 44px;
+}
+.nav ul .end{
+    margin-right: 0;
+}
+.nav ul li a{
+    font-size: 17px;
+    color: #fff;
+}
+.nav ul li a:hover{
+    color: #7F8489;
+}
+.nav ul li .iconfont{
+    font-size: 18px;
+}
+/*小屏开始*/
+.small{
+    display: none;
+}
+.small-left{
+    width: 33.33333%;
+    height: 44px;
+    float: left;
+}
+.small-one{
+    width: 17px;
+    height: 1px;
+    margin-top: 15px;
+    margin-left: 20px;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+.small-two{
+    width: 17px;
+    height: 1px;
+    margin-top: 10px;
+    margin-left: 20px;
+    background: #fff;
+    transition: transform 1s ease;
+}
+.small-mid{
+    width: 33.333333%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    float: left;
+}
+.small-mid a{
+    color: #fff;
+    font-size: 20px;
+}
+.small-mid a:hover{
+    color: #7F8489;
+}
+.small-right{
+    width: 33.333333%;
+    height: 44px;
+    text-align: right;
+    line-height: 44px;
+    float: left;
+}
+.small-right a{
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.small-right a:hover{
+    color: #7F8489;
+}
+/*隐藏导航开始*/
+.menu{
+    width: 100%;
+    height: 0;
+    background: rgba(0,0,0,1);
+    transition: height 2s ease;
+    overflow: hidden;
+    display: none;
+}
+.menu li {
+    width: 80%;
+    height: 49px;
+    line-height: 50px;
+    margin: 0 auto;
+    border-bottom: 1px solid #7F8489;
+}
+.menu li a{
+    font-size: 17px;
+    color: #fff;
+    display: none;
+}
+.menu li a:hover{
+    color: #7F8489;
+}
+.menu li .iconfont{
+    font-size: 18px;
+}
+.menu li .iconfont:hover{
+    color: #fff;
+}
+
+@media screen and (max-width:750px ){
+    .nav{
+        display: none;
+    }
+    .small{
+        display: block;
+    }
+    .menu{
+        display: block;
+    }
+    .menu li a {
+        display: block;
+    }
+}
+/*导航栏结束*/
+/*banner开始*/
+.banbox{
+    width: 100%;height:650px;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.banner1{
+    width: 100%;height:100%;
+    position: absolute;
+    top:0;left:0;
+    display: block;
+    z-index: 1;
+    background: url(../img/1.jpg) no-repeat center bottom rgb(255,255,255);
+}
+.ban1-top{
+    width: 100%;height:40px;
+    margin: 0 auto;
+    position: absolute;
+    top:24%;left:0;
+    background: url("../img/3.png") no-repeat center center;
+}
+.ban1-zi{
+    width:100%;height: 30px;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    color: #000;
+    line-height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    top:34%;left:0;
+}
+.banner2{
+    width: 100%;height:100%;
+    position: absolute;
+    top:0;  left:0;
+    display: block;
+    background: url("../img/2.jpg") no-repeat center 220% rgb(255,255,255);
+}
+.ban2-top{
+    width:100% ;height:120px;
+    position: absolute;
+    left:0;top:12%;
+    text-align: center;
+    line-height: 2.5em;
+}
+.ban2-zi1{
+    font-size: 52px;
+    font-weight: normal;
+    color:#000;
+}
+.ban2-zi2{
+    font-size: 30px;
+    font-weight: normal;
+    color: #000;
+}
+.banner3{
+    width: 100%;height:100%;
+    position: absolute;
+    top:0;  left:0;
+    display: block;
+    background: url("../img/3.jpg") no-repeat center 70% rgb(255,255,255);
+}
+.ban3-top{
+    width: 100%;height:40px;
+    margin: 0 auto;
+    position: absolute;
+    left:0; top:20%;
+    background: url("../img/4.png") no-repeat center center;
+}
+.ban3-zi{
+    display: block;
+    width: 100%;height: 30px;
+    position: absolute;
+    left:0; top:28%;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    font-weight: normal;
+}
+.banner4{
+    width: 100%;height:100%;
+    position: absolute;
+    top:0;  left:0;
+    display: block;
+    background: url("../img/1.png") no-repeat center 70% rgb(255,255,255);
+}
+.ban4-top{
+    width: 100%;height: 100px;
+    position: absolute;
+    left:0;top:24%;
+    text-align: center;
+    line-height:2em;
+}
+.ban4-zi1{
+    font-size: 52px;
+    font-weight: normal;
+    color:#000;
+}
+.ban4-zi2{
+    font-size: 30px;
+    font-weight: normal;
+    color: #000;
+}
+.btn{
+    width: 140px;
+    height: 12px;
+    /*background: red;*/
+    position: absolute;
+    left:45%;bottom:0%;
+    z-index: 20;
+}.banner1{
+    width: 100%;height:100%;
+    position: absolute;
+    top:0;left:0;
+    display: block;
+    z-index: 1;
+    background: url(../img/1.jpg) no-repeat center bottom rgb(255,255,255);
+}
+.ban1-top{
+    width: 100%;height:40px;
+    margin: 0 auto;
+    position: absolute;
+    top:24%;left:0;
+    background: url("../img/3.png") no-repeat center center;
+}
+.ban1-zi{
+    width:100%;height: 30px;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    color: #000;
+    line-height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    top:34%;left:0;
+}
+.banner2{
+    width: 100%;height:100%;
+    position: absolute;
+    top:0;  left:0;
+    display: block;
+    background: url("../img/2.jpg") no-repeat center 220% rgb(255,255,255);
+}
+.ban2-top{
+    width:100% ;height:120px;
+    position: absolute;
+    left:0;top:12%;
+    text-align: center;
+    line-height: 2.5em;
+}
+.ban2-zi1{
+    font-size: 52px;
+    font-weight: normal;
+    color:#000;
+}
+.ban2-zi2{
+    font-size: 30px;
+    font-weight: normal;
+    color: #000;
+}
+.banner3{
+    width: 100%;height:100%;
+    position: absolute;
+    top:0;  left:0;
+    display: block;
+    background: url("../img/3.jpg") no-repeat center 70% rgb(255,255,255);
+}
+.ban3-top{
+    width: 100%;height:40px;
+    margin: 0 auto;
+    position: absolute;
+    left:0; top:20%;
+    background: url("../img/4.png") no-repeat center center;
+}
+.ban3-zi{
+    display: block;
+    width: 100%;height: 30px;
+    position: absolute;
+    left:0; top:28%;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    font-weight: normal;
+}
+.banner4{
+    width: 100%;height:100%;
+    position: absolute;
+    top:0;  left:0;
+    display: block;
+    background: url("../img/1.png") no-repeat center 70% rgb(255,255,255);
+}
+.ban4-top{
+    width: 100%;height: 100px;
+    position: absolute;
+    left:0;top:24%;
+    text-align: center;
+    line-height:2em;
+}
+.ban4-zi1{
+    font-size: 52px;
+    font-weight: normal;
+    color:#000;
+}
+.ban4-zi2{
+    font-size: 30px;
+    font-weight: normal;
+    color: #000;
+}
+.btn{
+    width: 140px;
+    height: 12px;
+    position: absolute;
+    left:45%;bottom:2%;
+    z-index: 20;
+}
+.btn li{
+    float: left;
+    background: #999;
+    width: 11px;height: 11px;
+    border-radius: 50%;
+   margin-right: 20px;
+}
+.btn #active{
+    border:1px solid #117ACD;
+    background: #fff;
+}
+.left-btn{
+    width: 45px;height: 75px;
+    background: #fff;
+    position: absolute;
+    left:2%;top:45%;
+    overflow: hidden;
+    z-index: 20;
+    opacity: 0;
+}
+.right-btn{
+    width: 45px;height: 75px;
+    background: #fff;
+    position: absolute;
+    right:2%;top:45%;
+    overflow: hidden;
+    z-index: 20;
+    opacity: 0;
+}
+@media screen and (max-width:750px) {
+    #banbox {
+        height: 480px;
+    }
+
+    #banbox .banner1 {
+        background: url(../img/1.small.jpg) no-repeat center 75% rgb(255, 255, 255);
+    }
+
+    .ban1-top {
+        position: absolute;
+        top:30%;left:0;
+        background: url("../img/3.small.png") no-repeat center center;
+    }
+
+    .ban1-zi {
+        font-size: 18px;
+        position: absolute;
+        top: 40%;
+        left: 0;
+    }
+
+    #banbox .banner2 {
+        background: url("../img/2.small.jpg") no-repeat center 85% rgb(255, 255, 255);
+    }
+
+    .ban2-top {
+        width: 100%;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        top: 30%;
+        line-height: 2em;
+    }
+
+    .ban2-zi1 {
+        font-size: 32px;
+    }
+
+    .ban2-zi2 {
+        font-size: 18px;
+    }
+
+    .banner3 {
+        background: url("../img/3.small.jpg") no-repeat center 70% rgb(255, 255, 255);
+    }
+
+    .ban3-top {
+        position: absolute;
+        left: 0;
+        top: 30%;
+        background: url("../img/4.small.png") no-repeat center center;
+    }
+
+    .ban3-zi {
+        position: absolute;
+        left: 0;
+        top: 38%;
+        font-size: 18px;
+    }
+
+    .banner4 {
+        background: url("../img/1.small.png") no-repeat center 70% rgb(255, 255, 255);
+    }
+
+    .ban4-top {
+        position: absolute;
+        top: 32%;
+        line-height: 2em;
+    }
+
+    .ban4-zi1 {
+        font-size: 32px;
+    }
+
+    .ban4-zi2 {
+        font-size: 18px;
+    }
+}
+/*banner结束*/
+/*四张图片开始*/
+.tubox{
+    width: 100%;height: auto;
+    background: #fff;
+    margin: 0 auto;
+}
+.tubox .row div[class*=col]{
+    border-top:2px solid #fff;
+    border-right:2px solid #fff;
+    border-bottom: 2px solid #fff;
+    height:200px;
+}
+.tu1{
+    background: url("../img/s1.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tu2{
+    background: url("../img/s2.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tu3{
+    background: url("../img/s3.jpg") no-repeat center center;
+    background-size: cover;
+}
+.tu4{
+    background: url("../img/s4.jpg") no-repeat center center;
+    background-size: cover;
+}
+/*四张图片结束*/
+/*五个文字竖堆开始*/
+body,html{
+    background: #f2f2f2;
+}
+.zibox{
+    padding-top: 32px;
+    width: 980px;
+    height: 230px;
+    margin: 0 auto;
+    display: none;
+}
+.zi1{
+    width: 20%;
+    height: 200px;
+    float: left;
+    line-height: 1.5em;
+}
+.zi1 ul li h3{
+    font-size: 11px;
+    font-weight: inherit;
+    color: #333;
+}
+.zi1 ul li a{
+    color: #666;
+}
+.zi1 ul li a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+.z13{
+    width: 20%;
+    height: 200px;
+    float: left;
+}
+.zi3 .zi3-top{
+    height:60px;
+    line-height: 1.5em;
+    margin-bottom: 26px;
+}
+.zi3 .zi3-top ul li h3{
+    color: #333;
+    font-size: 11px;
+    font-weight: inherit;
+}
+.zi3 .zi3-top ul li a{
+    color: #666;
+}
+.zi3 .zi3-top ul li a:hover{
+    text-decoration: underline;
+    color: #333;
+}
+.zi3 .zi3-bot{
+    height:60px;
+    line-height: 1.5em;
+    margin-bottom: 26px;
+}
+.zi3 .zi3-bot ul li h3{
+    color: #333;
+    font-size: 11px;
+    font-weight: inherit;
+}
+.zi3 .zi3-bot ul li a{
+    color: #666;
+}
+.zi3 .zi3-bot ul li a:hover{
+    text-decoration: underline;
+    color: #333;
+}
+
+/*小屏时候的文字部分开始*/
+.small-zi{
+    display: block;
+    width: 100%;height: auto;
+    padding-top:32px;
+}
+.small-zi .xiao{
+    width: 94%;
+    height: auto;
+    line-height: 40px;
+    margin: auto;
+    border-bottom: 1px solid #e3e3e3;
+}
+.samll-zi1{
+    width:100%;height:39px;
+    position: relative;
+}
+.one-zi{
+    color: #666;
+    cursor: pointer;
+}
+.one-zi:hover{
+    color: #333;
+}
+.yc-zi{
+    width: 100%;
+    height: 0;
+    transition: height 2s ease;
+    overflow: hidden;
+    display: block;
+    z-index:200;
+}
+.yc-zi li {
+    width: 96%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+}
+.yc-zi li a{
+    font-size: 11px;
+    color: #666;
+    display:block;
+}
+.yc-zi li a:hover{
+    color: #333;
+    text-decoration: underline;
+}
+.two-zi{
+    font-size: 16px;
+    color: #666;
+    position: absolute;
+    right: 4%;
+    cursor: pointer;
+}
+.two-zi:hover{
+    color: #333;
+}
+@media screen and (min-width: 750px){
+    .small-zi{
+        display: none;
+    }
+    .zibox{
+        display: block;
+    }
+    .yc-zi{
+        display: none;
+    }
+    .yc-zi li a{
+        display:none;
+    }
+}
+/*小屏时候的文字部分结束*/
+/*五个文字竖堆结束*/
+/*底部开始*/
+.bottombox{
+    padding-top: 24px;
+    width: 80%;height:127px;
+    margin: 0 auto;
+    display: block;
+}
+.bot-top{
+    width: 100%;height:20px;
+    color: #999;
+    font-size: 11px;
+}
+.bot-top a{
+    color: #3E93D6;
+}
+.huixian{
+    width: 100%;height: 1px;
+    margin: auto;
+    background: #999;
+    display: block;
+}
+.mid{
+    width: 100%;height:35px;
+    line-height: 35px;
+    color: #999;
+    margin: auto;
+}
+.mid-left{
+    margin-right: 20px;
+    float: left;
+}
+.mid ul li{
+    float: left;
+    color: #999;
+    font-size: 11px;
+    margin-right: 12px;
+}
+.mid ul li a{
+    color: #999;
+    font-size: 11px;
+}
+.mid ul li a:hover{
+    color: #666;
+}
+.mid-right{
+    width: 65px;
+    float: right;
+}
+.guohui{
+    display: block;
+    float: left;
+    width: 16px;height: 16px;
+    margin-top: 9px;
+    margin-right: 3px;
+    background: url(../img/16.png) no-repeat center center;
+}
+.china{
+    color: #999;font-size: 11px;
+}
+.bot-bot{
+    width: 100%;height:15px;
+    line-height: 15px;
+    color: #999;font-size: 11px;
+}
+.bot-bot a{
+   color:#999;
+}
+.bot-bot a:hover{
+    text-decoration: underline;
+}
+/*底部小屏开始*/
+.yc-bot{
+    width: 100%;
+    height: 140px;
+    padding: 24px 24px 20px 13px;
+    display: none;
+}
+.yc-mid-right{
+    width:100%;height: 40px;
+    line-height: 40px;
+}
+.yc-guohui{
+    display: block;
+    float: left;
+    width: 16px;height: 16px;
+    margin-top: 12px;
+    margin-right: 3px;
+    background: url(../img/16.png) no-repeat center center;
+}
+.yc-china{
+    color: #999;font-size: 11px;
+}
+.yc-china:hover{
+    color: #333;
+    text-decoration: underline;
+}
+.yc-mid-ban{
+    width: 100%;height:20px;
+    line-height: 20px;
+}
+.yc-mid-ban span{
+    color: #999;font-size: 11px;
+}
+.yc-bot-fen{
+    width: 100%;height:24px;
+    line-height: 24px;
+}
+.yc-bot-fen ul li{
+    float: left;
+    color: #999;
+    font-size: 11px;
+    margin-right: 12px;
+}
+.yc-bot-fen ul li a{
+    color: #999;
+    font-size: 11px;
+}
+.yc-bot-fen ul li a:hover{
+    color: #666;
+}
+.yc-bot-bot{
+    width: 100%;height:20px;
+    margin-bottom: 20px;
+    line-height: 20px;
+    color: #999;
+}
+.yc-bot-bot a{
+    color: #999;
+}
+.yc-bot-bot a:hover{
+    text-decoration: underline;
+}
+/*底部小屏结束*/
+@media screen and (max-width: 750px){
+    .huixian{
+        display: none;
+    }
+    .yc-bot{
+        display: block;
+    }
+    .bottombox{
+        display: none;
+    }
+}
+/*底部结束*/
